@@ -19,7 +19,7 @@ import java.util.Map;
  * @create 2022-04-15 9:47
  */
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/user1")
 public class UserController {
 
     @Autowired

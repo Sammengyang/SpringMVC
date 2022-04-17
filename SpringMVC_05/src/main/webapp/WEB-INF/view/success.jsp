@@ -13,12 +13,6 @@
 </head>
 <body>
     <h1>success</h1>
-    <p>${testRequest}</p>
-    <p>${testModeAdnView}</p>
-    <p>${testMode}</p>
-    <p>${testMap}</p>
-    <p>${testModelMap}   ${testModelMap}</p>
-    <p>${sessionScope.testSession}   ${applicationScope.application}</p>
 
 </body>
 </html>
