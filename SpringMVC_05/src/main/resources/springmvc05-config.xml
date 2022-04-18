@@ -31,7 +31,11 @@
         <property name="dataSource" ref="dataSource"/>
     </bean>
 <!--    视图控制器-->
-    <mvc:view-controller path="/mvc" view-name="success"></mvc:view-controller>
+    <mvc:view-controller path="/" view-name="home"></mvc:view-controller>
+    <mvc:view-controller path="/adduser" view-name="addUser"></mvc:view-controller>
+
+<!--    开放对静态资源的访问-->
+    <mvc:default-servlet-handler/>
 <!--    开启MVC注解驱动-->
     <mvc:annotation-driven/>
 
