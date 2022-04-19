@@ -1,11 +1,9 @@
-package com.zmy.springmvc.pojo;
-
-import org.springframework.jdbc.core.RowCallbackHandler;
+package com.zmy.springmv.pojo;
 
 /**
  * @author Sam  Email:superdouble@yeah.net
  * @Description
- * @create 2022-04-15 9:43
+ * @create 2022-04-18 17:01
  */
 public class User {
     private Integer uid;
@@ -29,6 +27,10 @@ public class User {
         this.uid = uid;
     }
 
+    public String getUname() {
+        return uname;
+    }
+
     public void setUname(String uname) {
         this.uname = uname;
     }
@@ -39,14 +41,5 @@ public class User {
 
     public void setUpassword(String upassword) {
         this.upassword = upassword;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "uid=" + uid +
-                ", uname='" + uname + '\'' +
-                ", upassword='" + upassword + '\'' +
-                '}';
     }
 }
