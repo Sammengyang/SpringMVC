@@ -9,7 +9,7 @@
 ">
 
 <!--    引入配置文件-->
-    <context:property-placeholder location="classpath:jdbc.properties"></context:property-placeholder>
+    <context:property-placeholder location="classpath:jdbc.properties"/>
 <!--    开启组件扫描-->
     <context:component-scan base-package="com.zmy.springmv"></context:component-scan>
 <!--    配置视图解析器-->
@@ -39,5 +39,34 @@
     <mvc:default-servlet-handler/>
 <!--    开启MVC注解驱动-->
     <mvc:annotation-driven/>
+<!--    配置拦截器-->
+    <mvc:interceptors>
+<!--        <bean class="com.zmy.springmv.controller.FirstInterceptor"></bean>-->
+<!--        <ref bean="firstInterceptor"></ref>-->
+        <mvc:interceptor>
+<!--            指定拦截路径-->
+            <mvc:mapping path="/**"/>
+<!--            排除-->
+            <mvc:exclude-mapping path="/"/>
+            <ref bean="firstInterceptor"></ref>
+        </mvc:interceptor>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/"/>
+            <bean class="com.zmy.springmv.controller.SecondInterceptor"></bean>
+        </mvc:interceptor>
+    </mvc:interceptors>
+<!--    配置异常处理-->
+<!--    <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">-->
+<!--        <property name="exceptionMappings">-->
+<!--            <props>-->
+<!--&lt;!&ndash;            prop的键表示处理器方法执行过程中出现的异常&ndash;&gt;-->
+<!--&lt;!&ndash;            prop的值表示若出现指定异常，设置一个新的视图名称，跳转到指定页面    &ndash;&gt;-->
+<!--                <prop key="java.lang.ArithmeticException">error</prop>-->
+<!--            </props>-->
+<!--        </property>-->
+<!--&lt;!&ndash;        设置异常信息共享在请求域中的键&ndash;&gt;-->
+<!--        <property name="exceptionAttribute" value="ex"></property>-->
+<!--    </bean>-->
 
 </beans>

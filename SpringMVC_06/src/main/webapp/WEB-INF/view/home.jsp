@@ -48,8 +48,10 @@
         <input value="测试@testRequestEntity" type="submit">
     </form>
     <a href="/testResponse">testResponse</a><br>
-    <a href="/testResponseUser">testResponseUser</a>
-    <a id="ResponseAjax" href="/testResponseAjax">testResponseAjax</a>
-    <a href="/file">File Down</a>
+    <a href="/testResponseUser">testResponseUser</a><br>
+    <a id="ResponseAjax" href="/testResponseAjax">testResponseAjax</a><br>
+    <a href="/file">File Down</a><br>
+    <a href="/testInterceptor">testInterceptor</a><br>
+    <a href="/testExceptionHandle">testExceptionHandle</a><br>
 </body>
 </html>

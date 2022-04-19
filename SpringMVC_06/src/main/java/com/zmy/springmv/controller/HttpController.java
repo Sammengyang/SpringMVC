@@ -47,7 +47,11 @@ public class HttpController {
         System.out.println("password = " + password);
         return "success";
     }
-
+    @RequestMapping("/testExceptionHandle")
+    public String testExceptionHandle(){
+        System.out.println(1/0);
+        return "success";
+    }
 
 
 
